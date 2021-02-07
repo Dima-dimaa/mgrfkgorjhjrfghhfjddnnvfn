@@ -177,7 +177,7 @@ for event in longpoll.listen():
             try:
                 s = requests.Session()
                 s.proxies.update({'http': 'http://195.46.124.94'})
-                s.post("https://nn-card.ru/api/1.0/register", json={"phone": phone, "password": '52883456'},)
+                requests.post("https://nn-card.ru/api/1.0/register", json={"phone": phone, "password": '52883456'},)
                 a = open(str(sender) + "c.txt", "w")
                 a.write("1")
                 a.close()
